@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 #define DEFINE_ISDATA_MAGIC_BYTES(name) static const uint8_t name[] = {'_', 'I', 'S', 'D', 'A', 'T', 'A', '_', 'M', 'O', 'D', '_', 'H', 'D', 'R', '_'}
-#define ISDATA_MAGIC_BYTES_LEN (sizeof(isdata_magic_bytes))
+#define ISDATA_MAGIC_BYTES_LEN (16)
 
 #define ISDATA_VERSION (0)
 
