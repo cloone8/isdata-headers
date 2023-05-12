@@ -10,16 +10,16 @@
 #define DEFINE_ISDATA_MAGIC_BYTES(name) static const uint8_t name[] = {'_', 'I', 'S', 'D', 'A', 'T', 'A', '_', 'M', 'O', 'D', '_', 'H', 'D', 'R', '_'}
 #define ISDATA_MAGIC_BYTES_LEN (16)
 
-#define ISDATA_VERSION (0)
+#define ISDATA_VERSION (1)
 
-#define ISDATA_EFLAG_ARRAY (1 << 0)
-#define ISDATA_EFLAG_PTR (1 << 1)
+#define ISDATA_EFLAG_PTR (1 << 0)
 
 struct isdata_entry {
     uint16_t name_len;
     char* name;
-    uint64_t size;
     uint32_t flags;
+    uint64_t size;
+    uint64_t num_elems;
     void* addr;
 };
 
