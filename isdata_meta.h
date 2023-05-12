@@ -1,7 +1,11 @@
 #ifndef __PEEKFS_META_HEADERS_H__
 #define __PEEKFS_META_HEADERS_H__
 
-#include <stdint.h>
+#ifndef __KERNEL__
+    #include <stdint.h>
+#else
+    #include <linux/types.h>
+#endif
 
 #define DEFINE_ISDATA_MAGIC_BYTES(name) static const uint8_t name[] = {'_', 'I', 'S', 'D', 'A', 'T', 'A', '_', 'M', 'O', 'D', '_', 'H', 'D', 'R', '_'}
 #define ISDATA_MAGIC_BYTES_LEN (16)
