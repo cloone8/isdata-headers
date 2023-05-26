@@ -20,26 +20,28 @@
 #define ISDATA_SDFLAG_PACKED (1 << 0)
 
 struct isdata_structfield {
+    uint8_t flags;
     uint16_t name_len;
     char* name;
-    uint8_t flags;
+    uint64_t offset_in_bits;
     uint64_t size_or_def;
     uint64_t num_elems;
 };
 
 struct isdata_structdef {
+    uint8_t flags;
+    uint64_t size;
     uint64_t num_fields;
     struct isdata_structfield* fields;
-    uint8_t flags;
 };
 
 struct isdata_entry {
     uint16_t name_len;
-    char* name;
     uint32_t flags;
+    char* name;
+    void* addr;
     uint64_t size_or_def;
     uint64_t num_elems;
-    void* addr;
 };
 
 struct isdata_module {
