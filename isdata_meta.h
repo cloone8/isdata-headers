@@ -10,7 +10,7 @@
 #define DEFINE_ISDATA_MAGIC_BYTES(name) const uint8_t name[] = {'_', 'I', 'S', 'D', 'A', 'T', 'A', '_', 'M', 'O', 'D', '_', 'H', 'D', 'R', '_'}
 #define ISDATA_MAGIC_BYTES_LEN (16)
 
-#define ISDATA_VERSION (2)
+#define ISDATA_VERSION (3)
 
 #define ISDATA_EFLAG_PTR (1 << 0)
 #define ISDATA_EFLAG_STRUCT (1 << 1)
