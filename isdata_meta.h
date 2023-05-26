@@ -24,7 +24,7 @@ struct isdata_structfield {
     uint16_t name_len;
     char* name;
     uint64_t offset_in_bits;
-    uint64_t size_or_def;
+    uint64_t size_bits_or_def;
     uint64_t num_elems;
 };
 
